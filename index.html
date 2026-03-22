@@ -4,306 +4,182 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Angela Resume</title>
+
 <style>
-    *{
-        box-sizing:border-box;
-    }
+*{
+    box-sizing:border-box;
+}
 
-    body{
-        margin:0;
-        font-family:Arial, "Microsoft JhengHei", sans-serif;
-        background:#f3f5f8;
-        color:#222;
-    }
+body{
+    margin:0;
+    font-family:Arial, "Microsoft JhengHei", sans-serif;
+    background:#f3f5f8;
+    color:#222;
+}
 
-    .page{
-        max-width:1200px;
-        margin:40px auto;
-        background:#fff;
-        border-radius:20px;
-        box-shadow:0 8px 24px rgba(0,0,0,0.08);
-        padding:28px 30px 20px;
-    }
+.page{
+    max-width:900px;
+    margin:40px auto;
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    padding:20px;
+}
 
-    .layout{
-        display:grid;
-        grid-template-columns:220px 1fr;
-        gap:34px;
-        align-items:start;
-    }
+.layout{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:20px;
+    align-items:start;
+}
 
-    .left{
-        padding-top:6px;
-    }
+.avatar-box{
+    width:130px;
+    height:130px;
+    border-radius:16px;
+    overflow:hidden;
+    margin-bottom:15px;
+}
 
-    .avatar-box{
-        width:180px;
-        height:180px;
-        border-radius:18px;
-        overflow:hidden;
-        background:linear-gradient(135deg,#6ec1c8,#5b5ce6);
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        color:#fff;
-        font-size:64px;
-        font-weight:700;
-        margin-bottom:18px;
-    }
+.avatar-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 
-    .avatar-box img{
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        display:block;
-    }
+.student-id-label{
+    font-size:13px;
+    color:#666;
+}
 
-    .student-id-label{
-        color:#666;
-        font-size:15px;
-        margin-bottom:6px;
-    }
+.student-id{
+    font-weight:bold;
+    margin-bottom:12px;
+}
 
-    .student-id{
-        font-size:16px;
-        font-weight:700;
-        color:#4b5563;
-        margin-bottom:18px;
-    }
+.btn{
+    background:#67b9c0;
+    border:none;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:14px;
+}
 
-    .btn{
-        display:inline-block;
-        border:none;
-        border-radius:12px;
-        padding:12px 18px;
-        font-size:15px;
-        cursor:pointer;
-        background:#67b9c0;
-        color:#fff;
-        margin-bottom:10px;
-    }
+.right h1{
+    margin:0;
+    font-size:36px;
+}
 
-    .btn.secondary{
-        background:#e9eef5;
-        color:#333;
-    }
+.subtitle{
+    color:#777;
+    margin-bottom:15px;
+}
 
-    .right h1{
-        margin:0 0 12px 0;
-        font-size:54px;
-        font-weight:800;
-        line-height:1.1;
-    }
+.section-title{
+    font-weight:bold;
+    margin-top:15px;
+}
 
-    .subtitle{
-        color:#7a7f89;
-        font-size:18px;
-        margin-bottom:26px;
-    }
+.intro, .skill-text, .exp-text, .contact-value{
+    font-size:14px;
+    line-height:1.6;
+    color:#444;
+}
 
-    .section-title{
-        font-size:18px;
-        font-weight:800;
-        margin:22px 0 14px;
-    }
+.skills-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
 
-    .intro{
-        color:#333;
-        line-height:1.8;
-        font-size:17px;
-        margin-bottom:24px;
-    }
+.bottom-actions{
+    margin-top:15px;
+}
 
-    .school{
-        font-size:20px;
-        font-weight:800;
-        margin-bottom:6px;
-    }
-
-    .edu-line{
-        color:#5f6670;
-        font-size:17px;
-        margin-bottom:24px;
-    }
-
-    .skills-grid{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:40px;
-        margin-bottom:24px;
-    }
-
-    .skill-title{
-        font-size:18px;
-        font-weight:800;
-        margin-bottom:10px;
-    }
-
-    .skill-text{
-        color:#667085;
-        font-size:17px;
-        line-height:1.8;
-    }
-
-    .exp-text{
-        color:#667085;
-        font-size:17px;
-        line-height:1.8;
-        margin-bottom:24px;
-    }
-
-    .contact-label{
-        font-size:18px;
-        font-weight:800;
-        margin-top:10px;
-        margin-bottom:8px;
-    }
-
-    .contact-value{
-        color:#667085;
-        font-size:17px;
-        line-height:1.8;
-        margin-bottom:10px;
-    }
-
-    .contact-value a{
-        color:#667085;
-        text-decoration:none;
-    }
-
-    .contact-value a:hover{
-        text-decoration:underline;
-    }
-
-    .bottom-actions{
-        display:flex;
-        gap:12px;
-        align-items:center;
-        margin-top:18px;
-        flex-wrap:wrap;
-    }
-
-    .footer-row{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        margin-top:28px;
-        color:#8a8f98;
-        font-size:14px;
-        gap:16px;
-    }
-
-    @media (max-width: 900px){
-        .layout{
-            grid-template-columns:1fr;
-        }
-
-        .right h1{
-            font-size:38px;
-        }
-
-        .skills-grid{
-            grid-template-columns:1fr;
-        }
-
-        .footer-row{
-            flex-direction:column;
-            align-items:flex-start;
-        }
-    }
+.footer{
+    margin-top:20px;
+    font-size:12px;
+    color:#999;
+    text-align:right;
+}
 </style>
 </head>
+
 <body>
 
 <div class="page">
-    <div class="layout">
+<div class="layout">
 
-        <div class="left">
-            <div class="avatar-box">
-                <img src="images/EBDD9F85-829A-4A84-AFB0-CB9F5BB481AD.jpg" alt="個人照片">
-            </div>
-
-            <div class="student-id-label">學生編號:</div>
-            <div class="student-id">114055007</div>
-
-            <button class="btn" onclick="copyID()">複製學號</button>
-        </div>
-
-        <div class="right">
-            <h1>王瑀喬</h1>
-            <div class="subtitle">第一學年・亞洲大學・室內設計學系</div>
-
-            <div class="section-title">個人簡介</div>
-            <div class="intro">
-                我是亞洲大學室內設計系學生，對空間設計與視覺創作有濃厚興趣，
-                喜歡結合插畫與AI工具進行創作，持續學習新的設計技術。
-            </div>
-
-            <div class="section-title">學歷</div>
-            <div class="school">亞洲大學</div>
-            <div class="edu-line">第一學年（在學）— 主修：室內設計學系</div>
-
-            <div class="section-title">技能</div>
-            <div class="skills-grid">
-                <div>
-                    <div class="skill-title">設計</div>
-                    <div class="skill-text">室內設計、空間規劃、版面編排</div>
-                </div>
-                <div>
-                    <div class="skill-title">數位工具</div>
-                    <div class="skill-text">Illustration、AI Design、基礎 HTML/CSS</div>
-                </div>
-            </div>
-
-            <div class="section-title">經歷</div>
-            <div class="exp-text">
-                目前以學習與作品累積為主，持續練習設計表達、版面配置與數位創作能力。
-            </div>
-
-            <div class="section-title">聯絡方式</div>
-
-            <div class="contact-label">Email</div>
-            <div class="contact-value">
-                <a href="mailto:114055007@live.asia.edu.tw">114055007@live.asia.edu.tw</a>
-            </div>
-
-            <div class="contact-label">電話</div>
-            <div class="contact-value">0986691735</div>
-
-            <div class="bottom-actions">
-                <button class="btn" onclick="window.print()">列印 / 另存為 PDF</button>
-                <button class="btn secondary" onclick="toggleDarkMode()">切換深色模式</button>
-            </div>
-        </div>
-
+<div>
+    <div class="avatar-box">
+        <img src="images/EBDD9F85-829A-4A84-AFB0-CB9F5BB481AD.jpg">
     </div>
 
-    <div class="footer-row">
-        <div>HTML 履歷 / 可編輯</div>
-        <div>最後更新：2026/3/14</div>
+    <div class="student-id-label">學生編號:</div>
+    <div class="student-id">114055007</div>
+
+    <button class="btn" onclick="copyID()">複製學號</button>
+</div>
+
+<div class="right">
+    <h1>王瑀喬</h1>
+    <div class="subtitle">第一學年・亞洲大學・室內設計學系</div>
+
+    <div class="section-title">個人簡介</div>
+    <div class="intro">
+        我是亞洲大學室內設計系學生，對空間設計與視覺創作有濃厚興趣，
+        喜歡結合插畫與AI工具進行創作，持續學習新的設計技術。
     </div>
+
+    <div class="section-title">學歷</div>
+    <div>亞洲大學（在學）— 室內設計學系</div>
+
+    <div class="section-title">技能</div>
+    <div class="skills-grid">
+        <div>
+            <b>設計</b>
+            <div class="skill-text">室內設計、空間規劃、版面編排</div>
+        </div>
+        <div>
+            <b>數位工具</b>
+            <div class="skill-text">Illustration、AI Design、HTML/CSS</div>
+        </div>
+    </div>
+
+    <div class="section-title">經歷</div>
+    <div class="exp-text">
+        目前以學習與作品累積為主，持續精進設計能力與創作表現。
+    </div>
+
+    <div class="section-title">聯絡方式</div>
+
+    <div class="contact-value">
+        Email: 114055007@live.asia.edu.tw
+    </div>
+
+    <div class="contact-value">
+        電話: 0986691735
+    </div>
+
+    <div class="bottom-actions">
+        <button class="btn" onclick="window.print()">列印 / PDF</button>
+    </div>
+</div>
+
+</div>
+
+<div class="footer">
+最後更新：2026/3/22
+</div>
+
 </div>
 
 <script>
 function copyID(){
     navigator.clipboard.writeText("114055007");
     alert("學號已複製");
-}
-
-function toggleDarkMode(){
-    document.body.classList.toggle("dark-mode");
-    const page = document.querySelector(".page");
-    const isDark = document.body.classList.contains("dark-mode");
-
-    if(isDark){
-        document.body.style.background = "#1f2937";
-        page.style.background = "#111827";
-        page.style.color = "#f9fafb";
-    }else{
-        document.body.style.background = "#f3f5f8";
-        page.style.background = "#ffffff";
-        page.style.color = "#222";
-    }
 }
 </script>
 
