@@ -6,39 +6,38 @@
 <title>Angela Resume</title>
 
 <style>
-*{
-    box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
 body{
     margin:0;
-    font-family:Arial, "Microsoft JhengHei", sans-serif;
+    font-family:Arial,"Microsoft JhengHei",sans-serif;
     background:#f3f5f8;
     color:#222;
 }
 
+/* ⭐ 這裡是關鍵大小 */
 .page{
-    max-width:900px;
+    max-width:1000px;
     margin:40px auto;
     background:#fff;
     border-radius:20px;
     box-shadow:0 8px 24px rgba(0,0,0,0.08);
-    padding:20px;
+    padding:24px;
 }
 
 .layout{
     display:grid;
-    grid-template-columns:150px 1fr;
-    gap:20px;
-    align-items:start;
+    grid-template-columns:180px 1fr;
+    gap:28px;
 }
 
+/* ⭐ 頭像大小 */
 .avatar-box{
-    width:130px;
-    height:130px;
-    border-radius:16px;
+    width:150px;
+    height:150px;
+    border-radius:18px;
     overflow:hidden;
-    margin-bottom:15px;
+    margin-bottom:16px;
 }
 
 .avatar-box img{
@@ -48,59 +47,62 @@ body{
 }
 
 .student-id-label{
-    font-size:13px;
+    font-size:14px;
     color:#666;
 }
 
 .student-id{
     font-weight:bold;
-    margin-bottom:12px;
+    margin-bottom:14px;
 }
 
 .btn{
     background:#67b9c0;
     border:none;
     color:#fff;
-    padding:8px 14px;
-    border-radius:10px;
+    padding:10px 16px;
+    border-radius:12px;
     cursor:pointer;
     font-size:14px;
 }
 
+/* ⭐ 名字大小 */
 .right h1{
     margin:0;
-    font-size:36px;
+    font-size:44px;
 }
 
 .subtitle{
     color:#777;
-    margin-bottom:15px;
+    margin-bottom:18px;
+    font-size:16px;
 }
 
 .section-title{
     font-weight:bold;
-    margin-top:15px;
+    margin-top:18px;
+    font-size:16px;
 }
 
-.intro, .skill-text, .exp-text, .contact-value{
-    font-size:14px;
-    line-height:1.6;
+.intro,.skill-text,.exp-text,.contact-value{
+    font-size:15px;
+    line-height:1.7;
     color:#444;
 }
 
 .skills-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:20px;
+    gap:28px;
 }
 
 .bottom-actions{
-    margin-top:15px;
+    margin-top:18px;
 }
 
 .footer{
-    margin-top:20px;
-    font-size:12px;
+    margin-top:24px;
+    font-size:13px;
     color:#999;
     text-align:right;
 }
@@ -154,14 +156,8 @@ body{
     </div>
 
     <div class="section-title">聯絡方式</div>
-
-    <div class="contact-value">
-        Email: 114055007@live.asia.edu.tw
-    </div>
-
-    <div class="contact-value">
-        電話: 0986691735
-    </div>
+    <div class="contact-value">Email: 114055007@live.asia.edu.tw</div>
+    <div class="contact-value">電話: 0986691735</div>
 
     <div class="bottom-actions">
         <button class="btn" onclick="window.print()">列印 / PDF</button>
