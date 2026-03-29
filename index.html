@@ -15,7 +15,6 @@ body{
     color:#222;
 }
 
-/* ⭐ 這裡是關鍵大小 */
 .page{
     max-width:1000px;
     margin:40px auto;
@@ -31,7 +30,6 @@ body{
     gap:28px;
 }
 
-/* ⭐ 頭像大小 */
 .avatar-box{
     width:150px;
     height:150px;
@@ -66,7 +64,6 @@ body{
     font-size:14px;
 }
 
-/* ⭐ 名字大小 */
 .right h1{
     margin:0;
     font-size:44px;
@@ -110,6 +107,11 @@ body{
 </head>
 
 <body>
+
+<!-- 🎧 背景音樂（點擊後播放） -->
+<audio id="bgm" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <div class="page">
 <div class="layout">
@@ -167,7 +169,7 @@ body{
 </div>
 
 <div class="footer">
-最後更新：2026/3/22
+最後更新：2026/3/29
 </div>
 
 </div>
@@ -177,6 +179,14 @@ function copyID(){
     navigator.clipboard.writeText("114055007");
     alert("學號已複製");
 }
+
+// 點擊後播放音樂（解決瀏覽器限制）
+document.addEventListener("click", function(){
+    const bgm = document.getElementById("bgm");
+    if (bgm && bgm.paused) {
+        bgm.play();
+    }
+});
 </script>
 
 </body>
