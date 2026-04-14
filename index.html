@@ -53,7 +53,7 @@ body{
     object-fit:cover;
 }
 
-/* ⭐ 學號升級版 */
+/* 學號 */
 .student-id-box{
     margin-top:10px;
     padding:10px;
@@ -136,11 +136,11 @@ body{
 <div class="layout">
 
 <div>
+    <!-- ⭐ 頭像（這裡已修正） -->
     <div class="avatar-box">
-        <img src="me.jpg">
+        <img src="avatar.jpg">
     </div>
 
-    <!-- ⭐ 學號漂亮版 -->
     <div class="student-id-box">
         <div class="student-id-title">學生編號</div>
         <div class="student-id-number">114055007</div>
@@ -199,11 +199,11 @@ function copyID(){
     alert("學號已複製");
 }
 
-// ⭐ 音樂音量變小（重點在這）
+// ⭐ 音樂小聲版
 document.addEventListener("click", function(){
     const bgm = document.getElementById("bgm");
     if (bgm && bgm.paused) {
-        bgm.volume = 0.2;  // 👉 0~1 之間，0.2 很剛好
+        bgm.volume = 0.2;
         bgm.play();
     }
 });
