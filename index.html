@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
@@ -12,8 +12,11 @@ body{
     margin:0;
     font-family:Arial,"Microsoft JhengHei",sans-serif;
     color:#222;
+
     background:
-        <img src="images/me.jpg">
+        linear-gradient(rgba(230,220,245,0.7), rgba(230,220,245,0.7)),
+        url("images/images/me.jpg");
+
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
@@ -41,6 +44,7 @@ body{
     border-radius:18px;
     overflow:hidden;
     margin-bottom:16px;
+    border:3px solid #a78bfa;
 }
 
 .avatar-box img{
@@ -59,7 +63,6 @@ body{
     margin-bottom:14px;
 }
 
-/* 🎨 紫色按鈕 */
 .btn{
     background:#a78bfa;
     border:none;
@@ -119,7 +122,6 @@ body{
 
 <body>
 
-<!-- 🎧 背景音樂 -->
 <audio id="bgm" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
@@ -129,7 +131,7 @@ body{
 
 <div>
     <div class="avatar-box">
-        <img src="images/EBDD9F85-829A-4A84-AFB0-CB9F5BB481AD.jpg">
+        <img src="images/images/me.jpg">
     </div>
 
     <div class="student-id-label">學生編號:</div>
@@ -140,12 +142,12 @@ body{
 
 <div class="right">
     <h1>王瑀喬</h1>
-    <div class="subtitle">第一學年・亞洲大學・室內設計學系</div>
+    <div class="subtitle">亞洲大學｜室內設計學系</div>
 
     <div class="section-title">個人簡介</div>
     <div class="intro">
         我是亞洲大學室內設計系學生，對空間設計與視覺創作有濃厚興趣，
-        喜歡結合插畫與AI工具進行創作，持續學習新的設計技術。
+        喜歡結合插畫與AI工具進行創作，持續探索設計的可能性。
     </div>
 
     <div class="section-title">學歷</div>
@@ -155,17 +157,17 @@ body{
     <div class="skills-grid">
         <div>
             <b>設計</b>
-            <div class="skill-text">室內設計、空間規劃、版面編排</div>
+            <div class="skill-text">室內設計、空間規劃、版面設計</div>
         </div>
         <div>
-            <b>數位工具</b>
-            <div class="skill-text">Illustration、AI Design、HTML/CSS</div>
+            <b>工具</b>
+            <div class="skill-text">Illustrator、AI設計、HTML/CSS</div>
         </div>
     </div>
 
     <div class="section-title">經歷</div>
     <div class="exp-text">
-        目前以學習與作品累積為主，持續精進設計能力與創作表現。
+        持續累積設計作品與實作經驗，提升視覺與空間整合能力。
     </div>
 
     <div class="section-title">聯絡方式</div>
@@ -190,7 +192,6 @@ function copyID(){
     alert("學號已複製");
 }
 
-// 點擊後播放音樂（解決瀏覽器限制）
 document.addEventListener("click", function(){
     const bgm = document.getElementById("bgm");
     if (bgm && bgm.paused) {
