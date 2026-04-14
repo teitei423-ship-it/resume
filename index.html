@@ -53,7 +53,6 @@ body{
     object-fit:cover;
 }
 
-/* 學號 */
 .student-id-box{
     margin-top:10px;
     padding:10px;
@@ -136,9 +135,9 @@ body{
 <div class="layout">
 
 <div>
-    <!-- ⭐ 頭像（這裡已修正） -->
+    <!-- ⭐ 頭像（路徑已修好） -->
     <div class="avatar-box">
-        <img src="avatar.jpg">
+        <img src="images/avatar.jpg">
     </div>
 
     <div class="student-id-box">
@@ -199,7 +198,7 @@ function copyID(){
     alert("學號已複製");
 }
 
-// ⭐ 音樂小聲版
+// ⭐ 音樂小聲
 document.addEventListener("click", function(){
     const bgm = document.getElementById("bgm");
     if (bgm && bgm.paused) {
