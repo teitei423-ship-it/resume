@@ -11,17 +11,22 @@
 body{
     margin:0;
     font-family:Arial,"Microsoft JhengHei",sans-serif;
-    background:#f3f5f8;
     color:#222;
+    background:
+        <img src="images/me.jpg">
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
 
 .page{
     max-width:1000px;
     margin:40px auto;
-    background:#fff;
+    background:rgba(255,255,255,0.85);
     border-radius:20px;
     box-shadow:0 8px 24px rgba(0,0,0,0.08);
     padding:24px;
+    backdrop-filter:blur(4px);
 }
 
 .layout{
@@ -54,14 +59,20 @@ body{
     margin-bottom:14px;
 }
 
+/* 🎨 紫色按鈕 */
 .btn{
-    background:#67b9c0;
+    background:#a78bfa;
     border:none;
     color:#fff;
     padding:10px 16px;
     border-radius:12px;
     cursor:pointer;
     font-size:14px;
+    transition:0.2s;
+}
+
+.btn:hover{
+    background:#8b5cf6;
 }
 
 .right h1{
@@ -108,7 +119,7 @@ body{
 
 <body>
 
-<!-- 🎧 背景音樂（點擊後播放） -->
+<!-- 🎧 背景音樂 -->
 <audio id="bgm" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
@@ -159,7 +170,6 @@ body{
 
     <div class="section-title">聯絡方式</div>
     <div class="contact-value">Email: 114055007@live.asia.edu.tw</div>
-    <div class="contact-value">電話: 0986691735</div>
 
     <div class="bottom-actions">
         <button class="btn" onclick="window.print()">列印 / PDF</button>
